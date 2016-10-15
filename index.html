@@ -1,63 +1,320 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Demo by liulangxiaojie</title>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>我们在珠峰培训等你！</title>
+    <meta name="wxm:timeline_title" content="我们在珠峰培训等你！">
+    <meta name="wxm:appmessage_title" content="我们在珠峰培训等你！">
+    <meta name="wxm:appmessage_desc" content="我们在珠峰培训等你！">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="swiper.min.css"/>
+    <link rel="stylesheet" href="animate.css"/>
+    <link rel="stylesheet" href="index.css"/>
+    <script>
+        //rem 相对于根元素字体大小
+        ~(function (desW) {
+            var winW = document.documentElement.clientWidth;
+            var scale = winW / desW;
+            document.documentElement.style.fontSize = scale * 100 + "px";
+        })(640);
+    </script>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Demo</h1>
-        <p>小例子</p>
-        <p class="view"><a href="https://github.com/liulangxiaojie/demo">View the Project on GitHub <small>liulangxiaojie/demo</small></a></p>
-        <ul>
-          <li><a href="https://github.com/liulangxiaojie/demo/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/liulangxiaojie/demo/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/liulangxiaojie/demo">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<body>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
+<div id="main">
+    <div id="loading">
+        <div class="loadingProgress">
+            <div class="loadingProgressBar"></div>
 
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
+        </div>
+        <div class="loadTit">
+            <h3>珠峰培训</h3>
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
-
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can @mention a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
-      </section>
+            <h3>H5场景的交互型简历</h3>
+        </div>
     </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/liulangxiaojie">liulangxiaojie</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
+    <div id="sound">
+        <audio id="bell" src="img/bell.mp3" preload="auto" loop></audio>
+        <audio id="say" src="img/say.mp3" preload="auto"></audio>
+        <audio id="music" src="img/music.mp3" preload="auto" loop></audio>
+    </div>
+    <div id="phone">
+        <div id="phoneHead">
+            <div class="phoneHeadName"></div>
+            <div class="phoneHeadText"></div>
+        </div>
+        <div id="phoneBtn">
+            <div class="phoneBtnArc"></div>
+            <div class="phoneBtnTouch"></div>
+        </div>
+        <div id="phoneKey">
+            <div class="phoneKeyTouch"></div>
+        </div>
+    </div>
+    <div id="message">
+        <ul id="messageList">
+
+            <li class="sty1">
+                <div class="arrow"></div>
+                <img src="img/messageHead1.png">
+                哎，毕业了，工作还遥遥无期，好愁啊！
+            </li>
+            <li class="sty2">
+                <div class="arrow"></div>
+                <img src="img/messageHead2.png">
+                怎么会？认识我的毕业生一个月都拿一万多的好工作呢
+            </li>
+
+            <li class="sty2">
+                <div class="arrow"></div>
+                <img src="img/messageHead2.png">
+                是不是没学HTML5和移动端?
+            </li>
+
+            <li class="sty1 btnMsg"><div class="arrow"></div><img src="img/messageHead1.png">都学了啊,可我还是找不到工作?</li>
+            <li class="sty2">
+                <div class="arrow"></div>
+                <img src="img/messageHead2.png">
+                那就是HTML5的核心基础JS编程学的不够扎实，只顾花哨的效果了。原生JavaScript功夫是王道啊
+            </li>
+            <li class="sty2">
+                <div class="arrow"></div>
+                <img src="img/messageHead2.png">
+                还有就是现在的前端开发已经工程化了，像angular、react、node、webpack这些也要学，这些才是现在互联网开发的大势所趋！
+            </li>
+            <li class="sty2">
+                <div class="arrow"></div>
+                <img src="img/messageHead2.png">
+                原生JavaScript编程基础要精，像react之类的前端高级框架要熟，所以认识我的同学，工资普遍在12K以上！
+            </li>
+
+
+            <li class="sty1">
+                <div class="arrow"></div>
+                <img src="img/messageHead1.png">
+                啊？竟然有这么大差距呢！
+            </li>
+
+            <li class="sty1">
+                <div class="arrow"></div>
+                <img src="img/messageHead1.png">
+                这些东西我都不知道呢！真高兴认识了你！那我应该怎么办呢？
+            </li>
+
+            <li class="sty2">
+                <div class="arrow"></div>
+                <img src="img/messageHead2.png">
+                来珠峰培训学这些知识，工资不到九千退学费！
+            </li>
+            <li class="sty2">
+                <div class="arrow"></div>
+                <img src="img/messageHead2.png">
+                珠峰培训七年专注前端培训，全国闻名的HTML5培训学校。
+            </li>
+
+            <li class="sty2">
+                <div class="arrow"></div>
+                <img src="img/messageHead2.png">
+                详细的介绍你看下来的介绍吧
+            </li>
+        </ul>
+        <div id="messageText"></div>
+        <div class="keyboard" id="keyboard">
+            <span class="text1" id="text1"></span>
+            <span class="btnSend" id="btnSend"></span>
+        </div>
+    </div>
+    <div id="cube">
+        <ul id="cubeBox">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div id="cubeTip"></div>
+    </div>
+
+    <article class="swiper-container" id="details">
+        <div class="swiper-wrapper" id="detailsList">
+
+            <div class="swiper-slide">
+                <div class="a1">
+                    <dl class="list maki">
+                        <dt>课程大纲</dt>
+                        <dd><em>01</em><a href="#">JavaScript核心基础部分</a></dd>
+                        <dd><em>02</em><a href="#">JavaScript基础实战部分</a></dd>
+                        <dd><em>03</em><a href="#">JavaScript核心原理</a></dd>
+                        <dd><em>04</em><a href="#">jQuery源码级课程:从原理到实战</a></dd>
+                        <dd><em>05</em><a href="#">设计模式和设计规范</a></dd>
+                        <dd><em>06</em><a href="#">基于Promise模式的AJAX库</a></dd>
+                        <dd><em>07</em><a href="#">模块化和组件开发实战</a></dd>
+                        <dd><em>08</em><a href="#">协同开发和项目管理</a></dd>
+                        <dd><em>09</em><a href="#">后台服务,HTTP协议和Ajax</a></dd>
+                        <dd><em>10</em><a href="#">BAT企业级webApp开发与实战</a></dd>
+                        <dd><em>11</em><a href="#">React/Angular/gulp/webpack</a></dd>
+                    </dl>
+
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+                <div class="d1">
+                    <div class="dCourse">课程体系</div>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p id="last"></p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+
+                <div class="f1">
+                    <p class="fTitle"><img src="img/fT.png"></p>
+                    <ul class="teacherList">
+                        <li>
+                            <div class="pic">
+                                <img src="img/fpic1.png">
+                            </div>
+                            <p class="name">周啸天</p>
+
+                            <p class="info">珠峰培训教学总监,曾腾讯高级前端工程师</p>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="img/fpic6.png">
+                            </div>
+                            <p class="name">张仁阳</p>
+
+                            <p class="info">珠峰培训技术总监,曾用友软件,爱奇艺技术负责人</p>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="img/fpic2.jpg">
+                            </div>
+                            <p class="name">姜文</p>
+
+                            <p class="info">珠峰培训高级讲师,原百度前端工程师</p>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="img/fPic3.png">
+                            </div>
+                            <p class="name">田喜</p>
+
+                            <p class="info">珠峰培训高级讲师,原猎豹移动高级前端工程师</p>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="img/fpic4.png">
+                            </div>
+                            <p class="name">张亚涛</p>
+
+                            <p class="info">珠峰培训高级讲师,现百度高级前端工程师</p>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="img/fpic5.png">
+                            </div>
+                            <p class="name">郭永峰</p>
+
+                            <p class="info">珠峰培训高级讲师,现用友软件高级前端架构师、技术总监</p>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+            <div class="swiper-slide">
+
+                <div class="c1">
+                    <p class="con1">没有招生部门<br>但学生数量<span>每年翻倍</span></p>
+
+                    <p class="con2">没有就业部门<br>但学生的平均工资<span>超过一万二</span></p>
+
+                    <div class="jobTitle">就业信息</div>
+                    <div class="jobInfo">
+                        <img src="img/01.png">
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+
+                <div class="b1">
+                    <div class="box">
+                        <div class="img1">
+                            <img src="img/bgImg1.jpg" alt=""/>
+                        </div>
+                        <div class="img2">
+                            <img src="img/bgImg2.jpg" alt=""/>
+                        </div>
+                        <div class="img3">
+                            <img src="img/bgImg3.jpg">
+                        </div>
+                        <div class="img4">
+                            <img src="img/img7.png">
+                        </div>
+                        <div class="img5">
+                            <img src="img/img10.png">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+
+                <div class="e1">
+                    <p class="title">
+                        <span>联系我们</span>
+                        <span>concat us</span>
+                    </p>
+                    <ul>
+                        <li>
+                <span class="icon1">
+                    <img src="img/phone.png">
+                </span>
+
+                            <div class="conText contText1"><span>QQ群:</span>563379544<br><span>TEL:</span>4001806960</div>
+                        </li>
+
+                        <li>
+                <span class="icon3">
+                    <img src="img/address.png"/>
+                </span>
+
+                            <div class="conText contText3"><span>学校地址</span>
+                                <Br>
+                                北京昌平区回龙观东大街3号楼02号东段珠峰培训
+                            </div>
+                        </li>
+                        <li class="addressInfo">
+                            <img src="img/addressInfo.png">
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+</div>
+<div id="detailsReturn"></div>
+</article>
+
+</div>
+</body>
 </html>
+<script src="jquery-2.1.3.min.js"></script>
+<script src="makisu.min.js"></script>
+<script src="swiper.min.js"></script>
+<script src="index.js"></script>
